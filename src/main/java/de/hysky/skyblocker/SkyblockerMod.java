@@ -185,6 +185,7 @@ public class SkyblockerMod implements ClientModInitializer {
         EggFinder.init();
         TimeTowerReminder.init();
         SkyblockTime.init();
+        new EssenceShopPrice();
 
         Scheduler.INSTANCE.scheduleCyclic(Utils::update, 20);
         Scheduler.INSTANCE.scheduleCyclic(DiscordRPCManager::updateDataAndPresence, 200);
