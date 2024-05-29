@@ -36,7 +36,7 @@ public class EssenceShopPrice {
 
 	//TODO: maybe move the price value right after the essence amount ex: "1,500 Wither Essence (645k coins)"
 	private static void handleTooltip(ItemStack stack, Item.TooltipContext tooltipContext, TooltipType tooltipType, List<Text> lines) {
-		if (!SkyblockerConfigManager.get().uiAndVisuals.showEssenceCost) return;
+		if (!SkyblockerConfigManager.get().general.itemTooltip.showEssenceCost) return;
 		if (!(MinecraftClient.getInstance().currentScreen instanceof GenericContainerScreen screen) || !screen.getTitle().getString().contains("Essence Shop")) return;
 		String lore = Utils.concatenateLore(lines);
 		Matcher essenceMatcher = ESSENCE_PATTERN.matcher(lore);
